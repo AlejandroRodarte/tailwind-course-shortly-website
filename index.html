@@ -19,6 +19,48 @@
     <title>Shortly Website</title>
   </head>
   <body>
-    <h1 class="text-3xl">Shortly Website</h1>
+    <!-- Navigation Container -->
+    <nav id="navbar" class="container relative mx-auto p-6">
+      <!-- Main Nav Flex Container -->
+      <!-- 1. two flex items: logo/links container and login/signup buttons container -->
+      <div class="flex items-center justify-between">
+        <!-- Logo/Links Container -->
+        <div class="flex items-center space-x-20">
+          <!-- Logo Image -->
+          <img src="images/logo.svg" alt="" />
+          <!-- Links Container -->
+          <!-- 1. appears on large screens as a flex -->
+          <!-- 2. disappears on medium and smaller screens to display hamburger icon -->
+          <div class="hidden space-x-8 font-bold lg:flex">
+            <a href="#" class="text-grayish-violet hover:text-very-dark-violet"
+              >Features</a
+            >
+            <a href="#" class="text-grayish-violet hover:text-very-dark-violet"
+              >Pricing</a
+            >
+            <a href="#" class="text-grayish-violet hover:text-very-dark-violet"
+              >Resources</a
+            >
+          </div>
+        </div>
+        <!-- Login/Signup Buttons Container -->
+        <!-- 1. hidden on medium and smaller screens -->
+        <!-- 2. flex container on large screens -->
+        <div
+          class="hidden items-center space-x-6 font-bold text-grayish-violet lg:flex"
+        >
+          <!-- Login Button -->
+          <div class="hover:text-very-dark-violet">Login</div>
+          <!-- Sign Up Button -->
+          <a
+            href="#"
+            class="rounded-full bg-cyan px-8 py-3 font-bold text-white hover:opacity-70"
+            >Sign Up</a
+          >
+        </div>
+        <!-- TODO: Hamburger Icon -->
+      </div>
+      <!-- TODO: Mobile Menu -->
+    </nav>
   </body>
 </html>
