@@ -62,5 +62,50 @@
       </div>
       <!-- TODO: Mobile Menu -->
     </nav>
+    <!-- Hero Section -->
+    <section id="hero">
+      <!-- Main Hero Container -->
+      <!-- 1. two flex items: a text/button container and an image -->
+      <!-- 2. on large screens, text/button container goes first, then the image comes second -->
+      <!-- 3. on smaller screens, flex-col activates, BUT the image should go first, then the text/button comes second -->
+      <!-- 4. to invert the order of appearance of the flex items, we use flex-direction: column-reverse -->
+      <div class="container mx-auto flex flex-col-reverse p-6 lg:flex-row">
+        <!-- Text/Button Container -->
+        <div class="mb-44 flex flex-col space-y-10 lg:mt-16 lg:w-1/2 xl:mb-52">
+          <!-- Header Text -->
+          <h5
+            class="text-center text-5xl font-bold lg:max-w-md lg:text-left lg:text-6xl"
+          >
+            More than just shorter links
+          </h5>
+          <!-- Description Text -->
+          <p
+            class="text-center text-2xl text-gray-400 lg:max-w-md lg:text-left"
+          >
+            Build your brand's recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <!-- "Get Started" Button -->
+          <!-- 1. centered on medium and smaller screens -->
+          <!-- 2. uncentered on large screens -->
+          <div class="mx-auto lg:mx-0">
+            <a
+              href="#"
+              class="rounded-full bg-cyan py-5 px-10 text-2xl font-bold text-white hover:opacity-70 lg:py-4"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+        <!-- Image Container -->
+        <!-- 1. on small screens, container occupies all of the parent container's content width -->
+        <!-- 2. on medium screens, container fixates on 512px (32rem) -->
+        <!-- 3. on large screens, container occupies 50% of parent container's content width -->
+        <div class="mx-auto mb-24 md:w-128 lg:mb-0 lg:w-1/2">
+          <!-- Image -->
+          <img src="images/illustration-working.svg" alt="" />
+        </div>
+      </div>
+    </section>
   </body>
 </html>
