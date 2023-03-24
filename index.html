@@ -23,7 +23,8 @@
     <!-- Navigation Container -->
     <nav id="navbar" class="container relative mx-auto p-6">
       <!-- Main Nav Flex Container -->
-      <!-- 1. two flex items: logo/links container and login/signup buttons container -->
+      <!-- 1. two flex items: logo/links container (links only appear on desktop) -->
+      <!-- and login/signup buttons container (desktop) OR hamburger icon container (mobile) -->
       <div class="flex items-center justify-between">
         <!-- Logo/Links Container -->
         <div class="flex items-center space-x-20">
@@ -59,9 +60,43 @@
             >Sign Up</a
           >
         </div>
-        <!-- TODO: Hamburger Icon -->
+        <!-- Hamburger Icon -->
+        <!-- 1. hidden on large screens -->
+        <!-- 2. block on medium and smaller screens -->
+        <button
+          id="menu-btn"
+          class="hamburger block focus:outline-none lg:hidden"
+          type="button"
+        >
+          <div class="hamburger-top"></div>
+          <div class="hamburger-middle"></div>
+          <div class="hamburger-bottom"></div>
+        </button>
       </div>
-      <!-- TODO: Mobile Menu -->
+      <!-- Mobile Menu -->
+      <!-- 1. absolute-positioned so we can colocate this mobile menu at the right place -->
+      <!-- 2. hidden by default -->
+      <!-- 3. an "open" CSS class is attached via javascript upon clicking the hamburger HTML -->
+      <div
+        id="menu"
+        class="absolute left-6 right-6 top-20 z-10 hidden rounded-lg bg-dark-violet p-6"
+      >
+        <!-- Main Mobile Menu Container -->
+        <div
+          class="flex w-full flex-col items-center justify-center space-y-6 rounded-sm font-bold text-white"
+        >
+          <!-- Links that usually appear on large screens go inside this initially-hidden mobile menu -->
+          <a href="#" class="w-full text-center"> Features </a>
+          <a href="#" class="w-full text-center"> Pricing </a>
+          <a href="#" class="w-full text-center"> Resources </a>
+          <a href="#" class="w-full border-t border-gray-400 pt-6 text-center">
+            Login
+          </a>
+          <a href="#" class="w-full rounded-full bg-cyan py-3 text-center">
+            Sign Up
+          </a>
+        </div>
+      </div>
     </nav>
     <!-- Hero Section -->
     <section id="hero">
